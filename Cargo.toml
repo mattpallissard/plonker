@@ -1,0 +1,21 @@
+[package]
+name = "plonker"
+version = "0.1.0"
+edition = "2021"
+authors = ["Matt Pallissard <matt@pallissard.net>"]
+
+[build-dependencies]
+libbpf-cargo = "0.24.8"
+vmlinux = { version = "0.0", git = "https://github.com/mattpallissard/vmlinux.h.git", rev = "937cfb59785f4a243df82ba32ef6c59fe4338be9" }
+
+[dependencies]
+anyhow = "1.0.93"
+clap = { version = "4.5.21", features = ["derive"] }
+ctrlc = "3.4.5"
+epoll = "4.3.3"
+libbpf-rs = "0.24.8"
+libc = "0.2.167"
+nix = "0.29.0"
+plain = "0.2.3"
+socket2 = "0.5.8"
+time = "0.3.36"
